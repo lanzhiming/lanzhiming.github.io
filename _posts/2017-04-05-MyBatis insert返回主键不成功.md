@@ -8,7 +8,7 @@ tag: 教程
 
 * content
 {:toc}
-# MyBatis insert返回主键不成功
+
 > 说明：Mybaits的insert/update一般默认返回记录的更新条数，业务需要在保存完实体（insert）之后需要返回主键值。
 ## 官网说明
 [Mybaits官方文档](http://www.mybatis.org/mybatis-3/zh/sqlmap-xml.html#insert_update_and_delete)

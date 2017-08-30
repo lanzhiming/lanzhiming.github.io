@@ -28,13 +28,12 @@ FB:
   comments :
     provider : duoshuo
     duoshuo:
-        short_name : luoyan35714
+        short_name : lanzhiming
     disqus :
-        short_name : freudkang
+        short_name : lanzhiming
     # facebook :
     #   appid : 123
     #   num_posts: 5
     #   width: 580
     #   colorscheme: light
 theme: jekyll-theme-cayman
-

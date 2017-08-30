@@ -1,3 +1,13 @@
+---
+layout: post
+title:  MyBatis insert返回主键不成功
+date:   2017-04-05 11:08:00 +0800
+categories: document
+tag: 教程
+---
+
+* content
+{:toc}
 # MyBatis insert返回主键不成功
 > 说明：Mybaits的insert/update一般默认返回记录的更新条数，业务需要在保存完实体（insert）之后需要返回主键值。
 ## 官网说明
@@ -22,7 +32,7 @@
 ```xml
 <insert id="insertKPRecord" parameterType="org.krt.order.entity.Kprecord" useGeneratedKeys="true"
     keyProperty="id">
-	insert into t_kprecord(kpcode,kpdate,jxsid,kpname,spid,spamount,spunit,kptype,purpose) 
+	insert into t_kprecord(kpcode,kpdate,jxsid,kpname,spid,spamount,spunit,kptype,purpose)
 	values(#{kpcode},NOW(),#{jxsid},#{kpname},#{spid},#{spamount},#{spunit},#{kptype},#{purpose});
 </insert>
 ```
@@ -48,8 +58,8 @@
 <insert id="insertKPRecord" parameterType="org.krt.order.entity.Kprecord" >
 	<selectKey resultType="java.lang.Integer" order="AFTER" keyProperty="id">    
       SELECT LAST_INSERT_ID() AS ID      
-   	</selectKey> 
-	insert into t_kprecord(kpcode,kpdate,jxsid,kpname,spid,spamount,spunit,kptype,purpose) 
+   	</selectKey>
+	insert into t_kprecord(kpcode,kpdate,jxsid,kpname,spid,spamount,spunit,kptype,purpose)
 	values(#{kpcode},NOW(),#{jxsid},#{kpname},#{spid},#{spamount},#{spunit},#{kptype},#{purpose});
 </insert>
 ```
